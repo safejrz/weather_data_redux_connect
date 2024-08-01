@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
-//TODO: FIX
+//TODO:FIX
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import Paper from 'material-ui/Paper';
 //import AppBar from 'material-ui/AppBar';
@@ -31,41 +31,46 @@ class App extends Component {
     this.setState({ city });
     console.log(`handleSelectedLocation ${city}`);
   }
-  
+
   render() {
     const { city } = this.state;
-    return (      
-        <div>
-          {/* <MuiThemeProvider> */}
+    return (
+      <div>
+        {/* TODO:FIX */}
+        {/* <MuiThemeProvider> */}
         <Grid>
           <Row>
             <Col xs={12}>
+              {/* TODO:FIX */}
               {/* <AppBar title="Weather App" /> */}
               AppBar goes here!
             </Col>
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <LocationList cities={cities} 
-              onSelectedLocation={this.handleSelectedLocation} ></LocationList>
+              <LocationList cities={cities}
+                onSelectedLocation={this.handleSelectedLocation} ></LocationList>
             </Col>
             <Col xs={12} md={6}>
+              {/* TODO:FIX */}
               {/* <Paper zDepth={4}> */}
               PAPER GOES HERE!
-                <div className='detail'>
-                  {
-                    city && 
-                    <ForecastExtended city={city}></ForecastExtended>
-                  }
+              <div className='detail'>
+                {
+                  city &&
+                  <ForecastExtended city={city}></ForecastExtended>
+                }
 
-                </div>
-                PAPER GOES HERE!!
+              </div>
+              PAPER GOES HERE!!
+              {/* TODO:FIX */}
               {/* </Paper> */}
             </Col>
           </Row>
         </Grid>
+        {/* TODO:FIX */}
         {/* </MuiThemeProvider> */}
-        </div>              
+      </div>
     );
   }
 }

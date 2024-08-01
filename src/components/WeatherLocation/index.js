@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-//TODO: FIX
+//TODO:FIX
 //import CircularProgress from 'material-ui/CircularProgress';
 import Location from './Location';
 import WeatherData from './WeatherData';
@@ -39,7 +39,7 @@ class WeatherLocation extends Component {
             <Location city={city} /> 
             {data ? <WeatherData data={data} /> : 
             <div>CircularProgressHERE</div>
-            //TODO: FIX
+            //TODO:FIX
             //<CircularProgress size={60} thickness={7} />
             }
         </div>);

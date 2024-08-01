@@ -1,5 +1,5 @@
 import React from 'react';
-//TODO: FIX
+//TODO:FIX
 //import WeatherIcons from 'react-weathericons';
 import PropTypes from 'prop-types';
 // import { CLOUD, 
@@ -38,6 +38,7 @@ import PropTypes from 'prop-types';
 const getWeatherIcon = weatherState => {
     return (        
         <div>ICON</div>
+    // TODO:FIX
     // <WeatherIcons className='wicon' name={stateToIconName(weatherState)} size="4x" />    
 );
 };
