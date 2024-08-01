@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//TODO: FIX
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//import Paper from 'material-ui/Paper';
+//import AppBar from 'material-ui/AppBar';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import Paper from 'material-ui/Paper';
-import AppBar from 'material-ui/AppBar';
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended';
 
@@ -33,13 +34,14 @@ class App extends Component {
   
   render() {
     const { city } = this.state;
-    return (
-
-      <MuiThemeProvider>
+    return (      
+        <div>
+          {/* <MuiThemeProvider> */}
         <Grid>
           <Row>
             <Col xs={12}>
-              <AppBar title="Weather App" />
+              {/* <AppBar title="Weather App" /> */}
+              AppBar goes here!
             </Col>
           </Row>
           <Row>
@@ -48,7 +50,8 @@ class App extends Component {
               onSelectedLocation={this.handleSelectedLocation} ></LocationList>
             </Col>
             <Col xs={12} md={6}>
-              <Paper zDepth={4}>
+              {/* <Paper zDepth={4}> */}
+              PAPER GOES HERE!
                 <div className='detail'>
                   {
                     city && 
@@ -56,11 +59,13 @@ class App extends Component {
                   }
 
                 </div>
-              </Paper>
+                PAPER GOES HERE!!
+              {/* </Paper> */}
             </Col>
           </Row>
         </Grid>
-      </MuiThemeProvider>
+        {/* </MuiThemeProvider> */}
+        </div>              
     );
   }
 }
