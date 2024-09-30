@@ -4,11 +4,11 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
-import { createStore } from 'redux';
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended';
 import './App.css';
 import { setCity } from './actions'
+import { store } from './store';
 
 const cities = [
   'Buenos Aires,ar',
@@ -17,9 +17,6 @@ const cities = [
   'Mexico,mx',
   'Madrid,es'
 ];
-
-const store = createStore(() => { },
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class App extends Component {
   constructor() {
