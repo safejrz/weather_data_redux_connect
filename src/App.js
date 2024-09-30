@@ -18,9 +18,11 @@ const cities = [
   'Madrid,es'
 ];
 
+const store = createStore(() => { },
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-const store = createStore(() => {}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+// this is the actionCreator
+const setCity = value => ({ type: 'setCity', value })
 class App extends Component {
 
   constructor() {
@@ -32,10 +34,10 @@ class App extends Component {
     this.setState({ city });
     console.log(`handleSelectedLocation ${city}`);
 
-    const action = {type: 'setCity', value: city}
-    store.dispatch(action)
+    const action = { type: 'setCity', value: city }
+    store.dispatch(setCity(city))
   }
-  
+
   render() {
     const { city } = this.state;
     return (
@@ -49,14 +51,14 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <LocationList cities={cities} 
-              onSelectedLocation={this.handleSelectedLocation} ></LocationList>
+              <LocationList cities={cities}
+                onSelectedLocation={this.handleSelectedLocation} ></LocationList>
             </Col>
             <Col xs={12} md={6}>
               <Paper zDepth={4}>
                 <div className='detail'>
                   {
-                    city && 
+                    city &&
                     <ForecastExtended city={city}></ForecastExtended>
                   }
 
