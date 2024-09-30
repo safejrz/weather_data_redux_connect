@@ -7,7 +7,6 @@ import AppBar from 'material-ui/AppBar';
 import { createStore } from 'redux';
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended';
-
 import './App.css';
 
 const cities = [
@@ -20,11 +19,9 @@ const cities = [
 
 const store = createStore(() => { },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
 // this is the actionCreator
 const setCity = value => ({ type: 'setCity', value })
 class App extends Component {
-
   constructor() {
     super();
     this.state = { city: null };
@@ -33,15 +30,12 @@ class App extends Component {
   handleSelectedLocation = city => {
     this.setState({ city });
     console.log(`handleSelectedLocation ${city}`);
-
-    const action = { type: 'setCity', value: city }
     store.dispatch(setCity(city))
   }
 
   render() {
     const { city } = this.state;
     return (
-
       <MuiThemeProvider>
         <Grid>
           <Row>
@@ -61,7 +55,6 @@ class App extends Component {
                     city &&
                     <ForecastExtended city={city}></ForecastExtended>
                   }
-
                 </div>
               </Paper>
             </Col>
