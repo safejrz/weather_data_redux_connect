@@ -12,7 +12,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-flexbox-grid": "^1.1.5",
-    "react-redux": "^5.0.6",
+    "react-redux": "^5.1.2",
     "react-scripts": "^3.4.3",
     "react-weathericons": "^1.0.4",
     "redux": "^3.7.2",
@@ -31,5 +31,17 @@
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-react": "^7.4.0",
     "eslint-watch": "^7.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
