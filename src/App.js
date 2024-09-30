@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended';
 import './App.css';
+import { setCity } from './actions'
 
 const cities = [
   'Buenos Aires,ar',
@@ -19,8 +20,7 @@ const cities = [
 
 const store = createStore(() => { },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-// this is the actionCreator
-const setCity = value => ({ type: 'setCity', value })
+
 class App extends Component {
   constructor() {
     super();
